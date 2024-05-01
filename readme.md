@@ -4,12 +4,12 @@ REACT SUPERTEXT is a paragraph powered by some func like truncate,currency (and 
 
 ## Screenshots
 
-![App Screenshot](https://github.com/primaramadhaniputra/image/blob/main/text.png)
+![App Screenshot](https://github.com/primaramadhaniputra/image/blob/main/imagePoweredText.png)
 
 ## Usage/Examples
 
 ```javascript
-import {Text} from "react-super-text";
+import {Text} from "react-powered-text";
 
 const App = () => (
   <div>
@@ -37,6 +37,22 @@ const App = () => (
       </Text>
       <Text style={{fontSize: "50px"}}>(GUESS WHAT ?)</Text>
     </div>
+
+    <Text
+      style={{fontSize: "50px"}}
+      highlight={{
+        highlightText: ["DANI ADALAH", "GANTENG"],
+        highlightStyle: {
+          color: "white",
+          fontWeight: "bold",
+          background: "blue",
+          fontSize: "30px",
+          textDecoration: "underline overline",
+        },
+      }}
+    >
+      highlight DANI ADALAH MANUSIA GANTENG
+    </Text>
     <Text style={{fontSize: "50px"}}>DOING NOTHING</Text>
   </div>
 );
@@ -59,3 +75,9 @@ ReactDOM.createRoot(document.getElementById("app")!).render(<App />);
 | Prop Name | Value                        | required |
 | :-------- | :--------------------------- | :------- |
 | currency  | { from: number, to: number } | false    |
+
+#### Props that you can pass to Text highlight
+
+| Prop Name | Value                                                            | required |
+| :-------- | :--------------------------------------------------------------- | :------- |
+| highlight | { highlightText: string[], highlightStyle: React.CSSProperties } | false    |

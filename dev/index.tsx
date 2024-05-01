@@ -20,7 +20,7 @@ const App = () => (
       <Text
         truncate={{
           from: 0,
-          to: 19,
+          to: 16,
         }}
         style={{fontSize: "50px"}}
       >
@@ -28,6 +28,22 @@ const App = () => (
       </Text>
       <Text style={{fontSize: "50px"}}>(GUESS WHAT ?)</Text>
     </div>
+
+    <Text
+      style={{fontSize: "50px"}}
+      highlight={{
+        highlightText: ["DANI ADALAH", "GANTENG"],
+        highlightStyle: {
+          color: "white",
+          fontWeight: "bold",
+          background: "blue",
+          fontSize: "30px",
+          textDecoration: "underline overline",
+        },
+      }}
+    >
+      highlight DANI ADALAH MANUSIA GANTENG
+    </Text>
     <Text style={{fontSize: "50px"}}>DOING NOTHING</Text>
   </div>
 );

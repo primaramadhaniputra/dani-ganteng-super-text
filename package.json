@@ -1,6 +1,6 @@
 {
   "name": "react-powered-text",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1-beta.4",
   "description": "text powered by some func,like currency,truncate",
   "author": "Prawito Hudoro",
   "main": "dist/index.umd.js",
