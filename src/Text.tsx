@@ -17,24 +17,22 @@ export const Text: React.FC<TextProps> = ({currency, truncate, ...rest}) => {
   ) {
     return (
       <p {...rest}>
-        {truncate
-          ? `${handleCurrency(
-              Number(rest.children),
-              currency.locales,
-              currency.options
-            ).slice(truncate.from, truncate.to)}...`
-          : handleCurrency(
-              Number(rest.children),
-              currency.locales,
-              currency.options
-            )}
+        {handleCurrency(
+          Number(rest.children),
+          currency.locales,
+          currency.options
+        )}
       </p>
     );
   }
   if (truncate) {
     return (
       <p {...rest}>
-        {`${rest.children?.toString().slice(truncate.from, truncate.to)}...`}
+        {`${rest.children?.toString().slice(truncate.from, truncate.to)}${
+          rest.children && rest.children?.toString().length > truncate.to
+            ? "..."
+            : ""
+        }`}
       </p>
     );
   }

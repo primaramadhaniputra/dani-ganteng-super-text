@@ -20,7 +20,7 @@ const App = () => (
       <Text
         truncate={{
           from: 0,
-          to: 16,
+          to: 19,
         }}
         style={{fontSize: "50px"}}
       >
